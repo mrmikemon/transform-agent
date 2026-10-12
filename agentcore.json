@@ -1,0 +1,25 @@
+{
+  "name": "java-symbol-mapper",
+  "version": "1.0.0",
+  "description": "Java Symbol Mapper Agent - Clones a public Git repository, scans the Java project, and produces CSV files mapping symbols (classes, interfaces, enums, methods, fields) and their cross-referenced dependencies.",
+  "runtime": {
+    "entryPoint": "orchestrator_cli.py",
+    "platform": "linux/arm64",
+    "port": 8080,
+    "healthCheckPath": "/ping",
+    "delayedTimeout": 3600
+  },
+  "deployment": {
+    "region": "us-east-1",
+    "networkMode": "PUBLIC",
+    "serverProtocol": "HTTP"
+  },
+  "agent": {
+    "type": "orchestrator",
+    "modelId": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "jobOrchestrator": true
+  },
+  "environment": {
+    "STAGE": "prod"
+  }
+}

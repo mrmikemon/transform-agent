@@ -1,0 +1,10 @@
+agent-builder-sdk-aws-transform
+agent-builder-agentic-mcp-aws-transform
+agent-builder-types-aws-transform
+agent-builder-mcp-client-aws-transform
+strands-agents>=0.1.0
+boto3
+mcp
+requests
+gitpython>=3.1.0
+javalang>=0.13.0
